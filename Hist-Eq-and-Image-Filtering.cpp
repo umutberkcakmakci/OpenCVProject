@@ -120,7 +120,7 @@ Mat show_histograms(Mat& image, String window_name) {
 	//imshow(window_name+" Histograms", hist_combined);
 }
 
-void Blur(int sliderValue, void*)
+void Blur(int sliderValue, void*) // this is standart blurring operation, not asked in the tasks.
 {
     if(sliderValue <= 0)
     {
@@ -190,7 +190,7 @@ int main(int argc, char** argv) {
     /*    PART-1 of LAB-2    ****************************************************************************************************************/
 
 	// Load image
-    Mat image = imread("barbecue.png");
+    Mat image = imread("dei_noise.jpg");
 
     /*    ORIGINAL RGB IMAGE AND HISTOGRAM    **********************************************************************************************/
     // Show original image
@@ -203,6 +203,8 @@ int main(int argc, char** argv) {
     hist_orig = show_histograms(image, "Original Image");
     combineImages(image, hist_orig, "Original Image and Histogram");
     /****************************************************************************************************************************************/
+
+
 
 	/*    EQUALIZED RGB IMAGE AND HISTOGRAM    **********************************************************************************************/
     // Equalize each channel separately
@@ -223,6 +225,8 @@ int main(int argc, char** argv) {
     combineImages(eq_image, hist_eq, "Equalized (RGB) Image and Histogram");
     /****************************************************************************************************************************************/
 
+
+
     /*    EQUALIZED LAB IMAGE AND HISTOGRAM    **********************************************************************************************/
     // Convert image to Lab color space and equalize only L channel
     Mat lab_image, hist_lab;
@@ -240,9 +244,10 @@ int main(int argc, char** argv) {
     /*****************************************************************************************************************************************/
 
 
+
     /*    PART-2 of LAB-2    ******************************************************************************************************************/
 
-    src = lab_image;
+    src = image;
     Mat img_blur, img_gaus, img_median, img_bilat;
 
     //blur(src, img_blur, Size(kernel_length, kernel_length), Point(-1, -1));

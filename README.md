@@ -3,9 +3,9 @@ This repository includes some Computer Vision tasks performed in C++ language wi
 
 1- Histogram Equalization and Image Filtering
 
-2- Edge Detection and Hough Transform
+2- Road and Signs Detection with Hough Transform
 
-3- Keypoints, Descriptors and Matching
+3- Image Completion with Feature Descriptors
 
 4- ...
 

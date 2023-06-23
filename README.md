@@ -7,5 +7,5 @@ This repository includes some Computer Vision tasks performed in C++ language wi
 
 3- Image Completion with Feature Descriptors
 
-4- ...
+4- Offside Detection
 
